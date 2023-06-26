@@ -1,2 +1,2 @@
 # mysokoban
-Jeu du Sokoban en python
+Jeu du Sokoban en python avec Max Machin
