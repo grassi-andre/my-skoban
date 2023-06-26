@@ -53,7 +53,7 @@ Screen.title("Sokoban")
 Screen.geometry(str(Screen_width) + "x" + str(Screen_height))
 Screen.resizable(False, False)
 
-Screen.iconbitmap(os.getcwd() + "\\assets\\playerFace.ico")
+Screen.iconbitmap(os.getcwd() + "//assets//playerFace.ico")
 
 tableau = Canvas(Screen, width=BoardWidth, height=BoardHeight)
 tableau.pack()
@@ -73,14 +73,14 @@ labelLevel.place(x=286, y=584)
 
 ground = []
 for i in range(6):
-    ground.append(PhotoImage(file=os.getcwd() + "\\assets\\Default Size\\Ground\\" + str(i) + ".png"))
+    ground.append(PhotoImage(file=os.getcwd() + "//assets//Default Size//Ground//" + str(i) + ".png"))
 
 crates = []
 for i in range(2):
-    crates.append(PhotoImage(file=os.getcwd() + "\\assets\\Default Size\\Crates\\crate_" + str(i) + ".png"))
+    crates.append(PhotoImage(file=os.getcwd() + "//assets//Default Size//Crates//crate_" + str(i) + ".png"))
 
-block = PhotoImage(file=os.getcwd() + "\\assets\\Default Size\\Blocks\\block_05.png")
-player = PhotoImage(file=os.getcwd() + "\\assets\\Default Size\\Player\\player_05.png")
+block = PhotoImage(file=os.getcwd() + "//assets//Default Size//Blocks//block_05.png")
+player = PhotoImage(file=os.getcwd() + "//assets//Default Size//Player//player_05.png")
 
 def getLevelProg():
     global Level, MaxLevel
@@ -144,7 +144,7 @@ def createLevel(index):
     Boxes = []
     placedBoxes = []
 
-    with open(os.getcwd() + "\\levels.json", "r") as file:
+    with open(os.getcwd() + "//levels.json", "r") as file:
         createdFile = json.loads(file.read())["level{}".format(index)]
 
         Couche1 = createdFile["layer1"]
